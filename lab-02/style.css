@@ -1,0 +1,30 @@
+body {
+  margin: 0px;
+  background-color:  rgba(0, 0, 0, 0.705);
+  color: white;
+}
+
+.headings {
+  text-align: center;
+}
+
+main {
+  font-size: large;
+  max-width: 70%;
+  min-width: 10%;
+  margin: auto;
+}
+
+article {
+  border-style: solid;
+  border-color: yellowgreen;
+}
+
+article.f1 {
+  margin-top: 30px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}
