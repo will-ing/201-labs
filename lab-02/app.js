@@ -2,6 +2,8 @@
 
 var yName = prompt('what is your name?');
 
+var correctAns = [];
+
 function name() {
   
   var conf = confirm('Welcome ' + yName + ' do you want to play a game?');
@@ -21,6 +23,7 @@ function mColor() {
   if (myFavColor.toLowerCase().trim() === 'yes' || myFavColor.toLowerCase().trim() === 'true') {
   // console.log('That was a lucky guess');
     alert('That was a lucky guess');
+    correctAns.push(1);
     mCommute();
   } else  {
     // console.log('Well now you only missed one');
@@ -36,6 +39,7 @@ function mCommute() {
   if (myCommute.toLowerCase().trim() === 'yes' || myCommute.toLowerCase().trim() === 'true') {
   // console.log('Nope I take the train less gas and less traffic.');
     alert('Nope I take the train less gas and less traffic.');
+    correctAns.push(1);
     mFavTeam();
   } else {
     // console.log('Look at the brains on ' + name + '!')
@@ -51,6 +55,7 @@ function mFavTeam() {
   if (myFavTeam.toLowerCase().trim() === 'yes' || myFavTeam.toLowerCase().trim() === 'true') {
   //  console.log('building momentum!');
     alert('building momentum!');
+    correctAns.push(1);
     mJump();
   } else {
   //  console.log('Keep practicing!');
@@ -66,6 +71,7 @@ function mJump() {
   if (myJump.toLowerCase().trim() === 'yes' || myJump.toLowerCase().trim() === 'true') {
   //  console.log('Multiple times, ' + yName + '!');
     alert('Multiple times, ' + yName + '!');
+    correctAns.push(1);
     mHouse();
   } else {
   //  console.log('Negative ghost rider!');
@@ -81,15 +87,67 @@ function mHouse() {
   if (myHouse.toLowerCase().trim() === 'yes' || myHouse.toLowerCase().trim() === 'true') {
   //  console.log('Good guess, it is a lot of work!');
     alert('Good guess, it is a lot of work!');
-    thankYou();
+    correctAns.push(1);
   } else {
   //  console.log('Maybe this isn\'t your kind of game');
     alert('Maybe this isn\'t your kind of game')
-    thankYou();
+    
   }
+  mNum()
 }
 
-function thankYou() {
-  alert('Thanks for playing and getting to know me ' + yName + '!');
+
+
+function mNum() {
+  // queston 6
+  for(var i = 4; i > 0; i--) {
+    var myFavNum = prompt('I\'ll give you ' + i + ' chances to guess my favorite number.');
+  
+      if (myFavNum === '8') {
+        //  console.log('Good guess');
+          alert('Good guess!');
+          correctAns.push(1);
+          break;
+        } else if (myFavNum < 8) {
+        // console.log('Think bigger')  
+          alert('think bigger')
+        } else if (myFavNum > 8) {
+        // console.log('Think smaller')
+          alert('Think smaller');
+        } else {
+        //  console.log('Try again');
+          alert('Try again');
+          
+        }
+   } 
+   mVehicles()     
 }
-name();
+
+function mVehicles() {
+// question 7
+  var myCars = ['chevrolet', 'bmw', 'ford', 'dodge'];
+
+  for(var i = 6; i > 0; i--) {
+    var myVehicles = prompt('Name a car I have owned! You have ' + i + ' tries!');
+
+    if (myVehicles === myCars[0] || myVehicles === myCars[1] || myVehicles === myCars[2] || myVehicles === myCars[3]) {
+      alert('nice');
+      correctAns.push(1);
+      break;
+    } else {
+      alert('try again!');
+    }
+  }
+  alert('These are the vehicles I have owned ' + myCars[0] + ' ' + myCars[1] + ' ' + myCars[2] + ' ' + myCars[3] + '.' );
+  }
+  
+  
+
+
+function thankYou() {
+  alert('Thanks for playing and getting to know me ' + yName + '! You got ' + correctAns.length + ' correct');
+}
+name()
+//mNum()
+//mVehicles()
+thankYou()
