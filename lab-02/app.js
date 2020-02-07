@@ -4,21 +4,21 @@ var yName = prompt('what is your name?'); // enter name
 
 var correctAns = []; // arr for ttl crt ans
 
-var arrq = [
+var arrq = [ // questions 1-5
   'Is my favorite color blue?',
   'I drive my truck to school, correct?',
   'Alright ' + yName + ', you think I like the mariners?',
   'I\'ve jumped out of an airplane before, true or false?',
   'Do I own a home, yes or no?']
 
-var arrone = [
+var arrone = [ // answer one 1-5
   'That was a lucky guess',
   'Nope I take the train less gas and less traffic.',
   'building momentum!',
   'Multiple times, ' + yName + '!',
   'Good guess, it is a lot of work!']
 
-var arrtwo = [
+var arrtwo = [// answer tow 1-5
   'Well now you only missed one',
   'Look at the brains on ' + yName + '!',
   'Keep practicing!',
