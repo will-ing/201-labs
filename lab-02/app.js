@@ -126,18 +126,18 @@ function mNum() {
 function mVehicles() {
 // question 7
   var myCars = ['chevrolet', 'bmw', 'ford', 'dodge']; // my arr
-// this will run 6 time counting backwards
-  for(var i = 6; i > 0; i--) {
+  outer: // to break the outer loop
+  for(var i = 6; i > 0; i--) { // this will run 6 time counting backwards
     var myVehicles = prompt('Name a car I have owned! You have ' + i + ' tries!'); /// This will give a prompt with the remaining chances
-
-    if (myVehicles === myCars[0] || myVehicles === myCars[1] || myVehicles === myCars[2] || myVehicles === myCars[3]) { // eval each sect of arr
-      alert('nice');
-      correctAns.push(1); // this will add to the arr that has our ttl crt 
-      break; // breaks loop and cont
-    } else {
-      alert('try again!');
+    for (var j = 0; j < myCars.length; j++)
+      if (myVehicles === myCars[j]) { // eval each sect of arr
+        alert('nice');
+        correctAns.push(1); // this will add to the arr that has our ttl crt 
+        break outer; // breaks outer loop and cont
+      } 
+    alert('try again!');
+      
     }
-  }
   alert('These are the vehicles I have owned ' + myCars[0] + ' ' + myCars[1] + ' ' + myCars[2] + ' ' + myCars[3] + '.' ); // displays the crt ans
   }
   
@@ -147,6 +147,8 @@ function mVehicles() {
 function thankYou() {
   alert('Thanks for playing and getting to know me ' + yName + '! You got ' + correctAns.length + ' correct'); // counts arr and gives crt ans ttl
 }
+
+
 name() // this starts the game
 //mNum()
 //mVehicles()
