@@ -4,6 +4,27 @@ var yName = prompt('what is your name?'); // enter name
 
 var correctAns = []; // arr for ttl crt ans
 
+var arrq = [
+  'Is my favorite color blue?',
+  'I drive my truck to school, correct?',
+  'Alright ' + yName + ', you think I like the mariners?',
+  'I\'ve jumped out of an airplane before, true or false?',
+  'Do I own a home, yes or no?']
+
+var arrone = [
+  'That was a lucky guess',
+  'Nope I take the train less gas and less traffic.',
+  'building momentum!',
+  'Multiple times, ' + yName + '!',
+  'Good guess, it is a lot of work!']
+
+var arrtwo = [
+  'Well now you only missed one',
+  'Look at the brains on ' + yName + '!',
+  'Keep practicing!',
+  'Negative ghost rider!',
+  'Maybe this isn\'t your kind of game']
+
 name() // this starts the game
 
 thankYou() // lets you know its over and gives ttl crt
@@ -13,15 +34,15 @@ function name() {
   var conf = confirm('Welcome ' + yName + ' do you want to play a game?'); // ret true to init game.
 
   if (conf === true) {
-    combine('Is my favorite color blue?', 'That was a lucky guess', 'Well now you only missed one'); // first question
+    combine(arrq[0], arrone[0], arrtwo[0]); // first question
 
-    combine('I drive my truck to school, correct?', 'Nope I take the train less gas and less traffic.', 'Look at the brains on ' + yName + '!'); // second question
+    combine(arrq[1], arrone[1], arrtwo[1]); // second question
 
-    combine('Alright ' + yName + ', you think I like the mariners?', 'building momentum!', 'Keep practicing!'); // third question
+    combine(arrq[2], arrone[2], arrtwo[2]); // third question
 
-    combine('I\'ve jumped out of an airplane before, true or false?', 'Multiple times, ' + yName + '!', 'Negative ghost rider!'); // fourth question
+    combine(arrq[3], arrone[3], arrtwo[3]); // fourth question
 
-    combine('Do I own a home, yes or no?', 'Good guess, it is a lot of work!', 'Maybe this isn\'t your kind of game'); // fifth question
+    combine(arrq[4], arrone[4], arrtwo[4]); // fifth question
 
     mNum(); // this runs question 6 & 7 Loops are unique
 
