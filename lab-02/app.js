@@ -5,25 +5,9 @@ var yName = prompt('what is your name?'); // enter name
 var correctAns = []; // arr for ttl crt ans
 
 var arrq = [ // questions 1-5
-  'Is my favorite color blue?',
-  'I drive my truck to school, correct?',
-  'Alright ' + yName + ', you think I like the mariners?',
-  'I\'ve jumped out of an airplane before, true or false?',
-  'Do I own a home, yes or no?']
-
-var arrone = [ // answer one 1-5
-  'That was a lucky guess',
-  'Nope I take the train less gas and less traffic.',
-  'building momentum!',
-  'Multiple times, ' + yName + '!',
-  'Good guess, it is a lot of work!']
-
-var arrtwo = [// answer tow 1-5
-  'Well now you only missed one',
-  'Look at the brains on ' + yName + '!',
-  'Keep practicing!',
-  'Negative ghost rider!',
-  'Maybe this isn\'t your kind of game']
+  ['Is my favorite color blue?','I drive my truck to school, correct?', 'Alright ' + yName + ', you think I like the mariners?', 'I\'ve jumped out of an airplane before, true or false?', 'Do I own a home, yes or no?'],
+  ['That was a lucky guess', 'Nope I take the train less gas and less traffic.','building momentum!','Multiple times, ' + yName + '!', 'Good guess, it is a lot of work!'],
+  ['Well now you only missed one', 'Look at the brains on ' + yName + '!', 'Keep practicing!','Negative ghost rider!', 'Maybe this isn\'t your kind of game']]
 
 name() // this starts the game
 
@@ -34,16 +18,9 @@ function name() {
   var conf = confirm('Welcome ' + yName + ' do you want to play a game?'); // ret true to init game.
 
   if (conf === true) {
-    combine(arrq[0], arrone[0], arrtwo[0]); // first question
-
-    combine(arrq[1], arrone[1], arrtwo[1]); // second question
-
-    combine(arrq[2], arrone[2], arrtwo[2]); // third question
-
-    combine(arrq[3], arrone[3], arrtwo[3]); // fourth question
-
-    combine(arrq[4], arrone[4], arrtwo[4]); // fifth question
-
+      for (var j = 0; j < 5; j++){ // will loop through questions in arr;
+        combine(arrq[0][j], arrq[1][j], arrq[2][j]); // runs questions 1-5
+      }
     mNum(); // this runs question 6 & 7 Loops are unique
 
   } else { // exits out --> runs thankyou func
