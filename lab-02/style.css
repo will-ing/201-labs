@@ -18,11 +18,36 @@ main {
 article {
   border-style: solid;
   border-color: yellowgreen;
+  
 }
 
 article.f1 {
   margin-top: 30px;
   text-align: center;
+  ;
+}
+
+#states {
+  display: inline-block;
+  width: 210px;
+  margin-right: 3.5em;
+}
+
+#foods {
+  display: inline-block;
+  width: 210px;
+  margin-right: auto;
+}
+
+#songs {
+  display: inline-block;
+  width: 210px;
+  margin-right: 0px;
+  float: right;
+}
+
+ol {
+  text-align: left;
 }
 
 footer {

@@ -11,8 +11,6 @@ var arrq = [ // questions 1-5
 
 name() // this starts the game
 
-thankYou() // lets you know its over and gives ttl crt
-
 function name() {
   
   var conf = confirm('Welcome ' + yName + ' do you want to play a game?'); // ret true to init game.
@@ -23,7 +21,7 @@ function name() {
       }
     mNum(); // this runs question 6 & 7 Loops are unique
 
-  } else { // exits out --> runs thankyou func
+  } else { // exits out --> 
     alert('Don\'t be a square!') 
   }
 }
@@ -80,6 +78,7 @@ function mVehicles() {
       
     }
   alert('These are the vehicles I have owned ' + myCars[0] + ' ' + myCars[1] + ' ' + myCars[2] + ' ' + myCars[3] + '.' ); // displays the crt ans
+  thankYou();
   }
 
 function thankYou() {
