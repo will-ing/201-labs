@@ -6,6 +6,27 @@ body {
 
 .headings {
   text-align: center;
+  text-shadow: 5px 9px 11px rgba(182, 182, 190, 0.877);
+}
+
+figure {
+  float: left;
+  margin-top: 20px;
+  margin-left: 10%;
+}
+
+figcaption {
+  text-align: center;
+}
+
+img {
+  width: 300px;
+  border-radius: 20%;
+}
+
+#divlist {
+  display: inline-block;
+  width: 40%;
 }
 
 main {
@@ -18,32 +39,40 @@ main {
 article {
   border-style: solid;
   border-color: yellowgreen;
+  border-width: 5px;
+  box-shadow: 5px 15px 10px rgba(121, 199, 19, 0.788);
   
 }
 
 article.f1 {
   margin-top: 30px;
+  margin-bottom: 30px;
   text-align: center;
-  ;
+  border-radius: 20%;
+}
+
+#divone {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
 }
 
 #states {
-  display: inline-block;
-  width: 210px;
-  margin-right: 3.5em;
+  width: 30%;
+  float: left;
 }
 
 #foods {
   display: inline-block;
   width: 210px;
-  margin-right: auto;
+  margin: auto 10%;
 }
 
 #songs {
-  display: inline-block;
-  width: 210px;
+  width: 30%;
   margin-right: 0px;
   float: right;
+  
 }
 
 ol {
@@ -53,3 +82,5 @@ ol {
 footer {
   text-align: center;
 }
+
+/* https://github.com/josephlee3454/lab-0102/pull/2 */
