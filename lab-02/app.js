@@ -56,9 +56,8 @@ function mNum() {
         } else {
         //  console.log('Try again');
           alert('Try again');
-          
-        }
-   } 
+        } alert('Its the number of chances x 2!');// Alert if you get it wrong
+      } 
    mVehicles() // prompts next question
 }
 
