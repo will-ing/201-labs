@@ -2,6 +2,7 @@ body {
   margin: 0px;
   background-color:  rgba(0, 0, 0, 0.705);
   color: white;
+  background-image: linear-gradient(to bottom right,black, rgba(128, 128, 128, 0.452), black);
 }
 
 .headings {

@@ -30,9 +30,11 @@ function combine(q, rone, rtwo) { // uses 3 parameters
   var que = prompt(q); // prompts question and stores answer
   
   if  (que.toLowerCase().trim() === 'yes' || que.toLowerCase().trim() === 'true') { // evaluates if ans is true || false
+    console.log(rone);
     alert(rone); // gives alert arg for crt ans
     correctAns.push(1); // add to arr ttl crt
   } else {
+    console.log(rtwo);
     alert(rtwo); // gives alert arg for wrg ans
   }
 }
@@ -43,18 +45,18 @@ function mNum() {
     var myFavNum = prompt('I\'ll give you ' + i + ' chances to guess my favorite number.'); // prompts you and shows remaining guesses
   
       if (myFavNum === '8') { // crt ans to break loop
-        //  console.log('Good guess');
+         console.log('Good guess');
           alert('Good guess!');
           correctAns.push(1); // add to arr ttl crt
           break; // breaks loop and cont
         } else if (myFavNum < 8) {
-        // console.log('Think bigger')  
+          console.log('Think bigger')  
           alert('think bigger')
         } else if (myFavNum > 8) {
-        // console.log('Think smaller')
+          console.log('Think smaller')
           alert('Think smaller');
         } else {
-        //  console.log('Try again');
+          console.log('Try again');
           alert('Try again');
         } alert('Its the number of chances x 2!');// Alert if you get it wrong
       } 
@@ -69,6 +71,7 @@ function mVehicles() {
     var myVehicles = prompt('Name a car I have owned! You have ' + i + ' tries!'); /// This will give a prompt with the remaining chances
     for (var j = 0; j < myCars.length; j++)
       if (myVehicles === myCars[j]) { // eval each sect of arr
+        console.log('nice');
         alert('nice');
         correctAns.push(1); // this will add to the arr that has our ttl crt 
         break outer; // breaks outer loop and cont
